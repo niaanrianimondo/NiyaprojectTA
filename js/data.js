@@ -3,7 +3,7 @@
 // ============================================================
 
 // Ganti kalau Flask kamu jalan di alamat/port lain
-const API_BASE = 'http://127.0.0.1:5000';
+const API_BASE = '';
 
 const CLASS_TARGET = {
     "Kelas A": "45-50kg",
