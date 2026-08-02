@@ -339,7 +339,7 @@ body::before {
 /* ── PANELS ── */
 .main-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 20px;
 }
 
@@ -937,5 +937,39 @@ tbody tr:last-child td {
 
     .weight-num {
         font-size: 48px;
+    }
+}
+
+/* ===== LAYOUT BARU: kamera besar kiri, panel kanan ===== */
+.main-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.main-grid .panel:first-child .face-screen {
+    min-height: 480px;
+}
+
+.main-grid .panel:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-grid .panel:last-child .weight-display {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width: 900px) {
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-grid .panel:first-child .face-screen {
+        min-height: 320px;
     }
 }
